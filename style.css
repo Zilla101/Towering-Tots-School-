@@ -84,7 +84,7 @@ nav {
 }
 
 .logo-img {
-    height: 40px;
+    height: 56px; /* Increased by 40% (40px * 1.4) */
     width: auto;
     object-fit: contain;
 }
@@ -472,17 +472,8 @@ h3.kiddies-font {
 @media (max-width: 992px) {
     nav {
         justify-content: center;
-        padding: 0.8rem 5%;
+        padding: 0.6rem 5%;
         overflow: hidden;
-    }
-
-    .nav-bg {
-        display: block; /* Show only on mobile menu overlay */
-        opacity: 0.12;
-    }
-
-    .nav-crayon-line {
-        display: none; /* Keep mobile menu clean */
     }
 
     .nav-links {
