@@ -82,17 +82,10 @@ nav {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--crayon-blue);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo span {
-    color: var(--crayon-red);
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-links {
@@ -409,7 +402,8 @@ h3.kiddies-font {
 }
 
 .cta-box {
-    background: var(--crayon-yellow);
+    background: linear-gradient(135deg, #eef7ff 0%, #d1e9ff 100%);
+    border: 2px solid var(--crayon-blue);
     padding: 5rem 2rem;
     border-radius: 50px;
     color: var(--text-main);
