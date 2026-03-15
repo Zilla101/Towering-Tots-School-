@@ -487,28 +487,26 @@ h3.kiddies-font {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 1.5rem;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 2.5rem 1.5rem 1.5rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7)); /* Subtle gradient for legibility */
     text-align: left;
     z-index: 5;
     transition: all 0.5s ease;
 }
 
 .team-info h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: white;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
     text-transform: uppercase;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
 }
 
 .team-info p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.8);
 }
 
 /* Liquid CTA Hover for Team Cards */
@@ -524,8 +522,8 @@ h3.kiddies-font {
 }
 
 .team-card:hover .team-info {
-    background: rgba(77, 163, 255, 0.3);
-    padding-bottom: 2.5rem;
+    background: linear-gradient(transparent, rgba(77, 163, 255, 0.6));
+    padding-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
