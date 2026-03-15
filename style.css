@@ -104,6 +104,10 @@ nav {
     font-size: 1.1rem;
 }
 
+.nav-links a:hover {
+    color: var(--crayon-blue);
+}
+
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -111,7 +115,7 @@ nav {
     left: 0;
     width: 0;
     height: 4px;
-    background: var(--crayon-yellow);
+    background: var(--crayon-blue);
     transition: width 0.3s ease;
     border-radius: 10px;
 }
