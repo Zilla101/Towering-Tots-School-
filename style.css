@@ -454,6 +454,10 @@ h3.kiddies-font {
         padding: 0.8rem 5%;
     }
 
+    .nav-doodle {
+        display: none; /* Keep mobile clean */
+    }
+
     .hamburger {
         display: flex;
         position: absolute;
