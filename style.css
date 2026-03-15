@@ -70,7 +70,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 0.4rem 5%;
+    padding: 0.6rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,7 +80,6 @@ nav {
     -webkit-backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--glass-border);
     transition: all 0.3s ease;
-    overflow: hidden; 
 }
 
 .logo-img {
@@ -469,10 +468,10 @@ h3.kiddies-font {
     transform: translateY(0);
 }
 
+@media (max-width: 992px) {
     nav {
         justify-content: center;
-        padding: 0.6rem 5%;
-        overflow: hidden;
+        padding: 0.8rem 5%;
     }
 
     .hamburger {
