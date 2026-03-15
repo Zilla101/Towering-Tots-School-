@@ -172,15 +172,15 @@ nav {
     animation: float 8s ease-in-out infinite;
 }
 
-.doodle-1 { top: 10%; left: 5%; color: var(--crayon-red); }
-.doodle-2 { top: 40%; left: 2%; color: var(--crayon-blue); animation-delay: -2s; }
-.doodle-3 { top: 70%; left: 8%; color: var(--crayon-green); animation-delay: -4s; }
-.doodle-4 { top: 15%; right: 5%; color: var(--crayon-yellow); animation-delay: -1s; }
-.doodle-5 { top: 45%; right: 2%; color: var(--crayon-purple); animation-delay: -3s; }
-.doodle-6 { top: 75%; right: 8%; color: var(--crayon-red); animation-delay: -5s; }
-.doodle-7 { bottom: 10%; left: 20%; color: var(--crayon-blue); animation-delay: -1.5s; }
-.doodle-8 { bottom: 15%; right: 25%; color: var(--crayon-yellow); animation-delay: -3.5s; }
-.doodle-9 { top: 30%; left: 50%; transform: translateX(-50%); color: var(--crayon-green); opacity: 0.1; }
+.doodle-1 { top: 12%; left: 8%; color: var(--crayon-red); }
+.doodle-2 { top: 35%; left: 4%; color: var(--crayon-blue); animation-delay: -2s; transform: rotate(-10deg); }
+.doodle-3 { top: 65%; left: 10%; color: var(--crayon-green); animation-delay: -4s; }
+.doodle-4 { top: 18%; right: 10%; color: var(--crayon-yellow); animation-delay: -1s; transform: rotate(15deg); }
+.doodle-5 { top: 48%; right: 5%; color: var(--crayon-purple); animation-delay: -3s; }
+.doodle-6 { top: 78%; right: 12%; color: var(--crayon-red); animation-delay: -5s; transform: rotate(-20deg); }
+.doodle-7 { bottom: 8%; left: 15%; color: var(--crayon-blue); animation-delay: -1.5s; }
+.doodle-8 { bottom: 12%; right: 20%; color: var(--crayon-yellow); animation-delay: -3.5s; transform: rotate(10deg); }
+.doodle-9 { top: 25%; left: 55%; transform: translateX(-50%); color: var(--crayon-purple); opacity: 0.05; }
 
 .doodle svg {
     filter: blur(0.5px);
