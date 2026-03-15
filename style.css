@@ -1,0 +1,242 @@
+:root {
+    --bg-color: #ffffff;
+    --paper-texture: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+    --primary-font: 'Quicksand', sans-serif;
+    --accent-font: 'Outfit', sans-serif;
+    
+    /* Child-friendly harmonic palette */
+    --crayon-red: #ff5e5e;
+    --crayon-blue: #4da3ff;
+    --crayon-yellow: #ffd93d;
+    --crayon-green: #6BCB77;
+    --crayon-purple: #9d8df1;
+    
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%232d3436" d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>') 0 20, auto;
+}
+
+body {
+    font-family: var(--accent-font);
+    background-color: var(--bg-color);
+    background-image: var(--paper-texture);
+    color: var(--text-main);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Paper Ruling */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(77, 163, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(77, 163, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+h1, h2, h3 {
+    font-family: var(--primary-font);
+    font-weight: 700;
+}
+
+/* Premium Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--crayon-blue);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    color: var(--crayon-red);
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: var(--crayon-yellow);
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10%;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: var(--text-main);
+}
+
+.hero-title span {
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.hero-image-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    filter: drop-shadow(0 30px 50px rgba(0,0,0,0.1));
+    animation: float 8s ease-in-out infinite alternate;
+}
+
+.hero-main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+}
+
+.cta-button {
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    background: var(--crayon-blue);
+    color: white;
+    box-shadow: 0 10px 20px rgba(77, 163, 255, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(77, 163, 255, 0.4);
+}
+
+/* Floating Elements (Doodles) */
+.doodle {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.6;
+    animation: float 6s ease-in-out infinite;
+}
+
+.doodle-1 { top: 15%; left: 10%; animation-delay: 0s; }
+.doodle-2 { bottom: 20%; right: 10%; animation-delay: 1s; }
+.doodle-3 { top: 20%; right: 15%; animation-delay: 2s; }
+.doodle-4 { bottom: 15%; left: 15%; animation-delay: 3s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Glass Cards */
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 5rem 10%;
+}
+
+.card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    padding: 3rem;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: var(--crayon-purple);
+}
+
+/* Animations on Scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
