@@ -23,6 +23,7 @@ const navItems = document.querySelectorAll('.nav-links li a');
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navLinks.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
     document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
 });
 
@@ -30,6 +31,7 @@ navItems.forEach(item => {
     item.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navLinks.classList.remove('active');
+        document.body.classList.remove('menu-open');
         document.body.style.overflow = 'auto';
     });
 });
