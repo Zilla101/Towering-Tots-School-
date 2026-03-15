@@ -197,18 +197,23 @@ nav {
     padding: 1.2rem 3rem;
     font-size: 1.2rem;
     font-weight: 700;
-    border: none;
+    border: 2px solid var(--crayon-blue);
     border-radius: 50px;
-    background: var(--crayon-blue);
-    color: white;
-    box-shadow: 0 10px 20px rgba(77, 163, 255, 0.3);
+    background: rgba(77, 163, 255, 0.1);
+    color: var(--crayon-blue);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(77, 163, 255, 0.2);
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: liquidGlow 3s infinite;
 }
 
 .cta-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(77, 163, 255, 0.4);
+    background: var(--crayon-blue);
+    color: white;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(77, 163, 255, 0.4);
 }
 
 /* Global Floating Elements (Doodles) */
@@ -596,9 +601,11 @@ h3.kiddies-font {
 
     .portal-link {
         font-size: 1.1rem !important;
-        padding: 0.4rem 1rem !important;
+        padding: 0.4rem 0.8rem !important; /* Reduced horizontal padding for slimness */
         margin-top: 1rem;
         background: rgba(77, 163, 255, 0.1) !important;
+        width: auto !important; /* Ensure it doesn't stretch */
+        min-width: 100px;
     }
 }
 
