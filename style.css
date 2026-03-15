@@ -282,13 +282,20 @@ h3.kiddies-font {
     transform: translateY(-9px) rotate(-45deg);
 }
 
+.section-intro {
+    font-size: 2.2rem;
+    color: var(--crayon-green);
+    margin-top: -2rem;
+    margin-bottom: 4rem;
+}
+
 /* Glass Cards & Grids */
 .section-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
     padding: 5rem 10%;
-    align-items: start;
+    align-items: stretch;
 }
 
 /* ... existing styles extended ... */
