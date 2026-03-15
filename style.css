@@ -70,7 +70,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1rem 5%;
+    padding: 0.8rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,14 +79,11 @@ nav {
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     border-bottom: 1px solid var(--glass-border);
-    overflow: hidden; /* Contain background elements */
-}
-
     overflow: hidden; 
 }
 
 .logo-img {
-    height: 80px;
+    height: 60px;
     width: auto;
     object-fit: contain;
 }
