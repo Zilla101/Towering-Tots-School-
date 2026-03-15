@@ -70,20 +70,21 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 0.8rem 5%;
+    padding: 0.4rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.82);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
     overflow: hidden; 
 }
 
 .logo-img {
-    height: 60px;
+    height: 40px;
     width: auto;
     object-fit: contain;
 }
