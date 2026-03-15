@@ -363,9 +363,6 @@ h3.kiddies-font {
 
 .vision, .mission {
     padding: 2rem;
-    background: var(--glass-bg);
-    border-radius: 20px;
-    border: 1px solid var(--glass-border);
 }
 
 .vision h4, .mission h4 {
@@ -381,10 +378,7 @@ h3.kiddies-font {
 }
 
 .kiddie-card {
-    background: var(--glass-bg);
     padding: 2.5rem;
-    border-radius: 30px;
-    border: 1px solid var(--glass-border);
     transition: transform 0.3s ease;
 }
 
@@ -424,14 +418,13 @@ h3.kiddies-font {
 }
 
 .card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
     padding: 3rem;
-    border-radius: 30px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
     transition: transform 0.4s ease;
+}
+
+.message-content {
+    position: relative;
+    z-index: 2;
 }
 
 .card:hover {
