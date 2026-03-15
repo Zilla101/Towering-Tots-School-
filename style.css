@@ -310,11 +310,39 @@ nav {
     66% { transform: translate(-20px, 30px) rotate(-10deg) scale(0.9); }
 }
 
+.welcome-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 5rem;
+}
+
+.welcome-photo {
+    padding: 1rem;
+    border-radius: 30px;
+    height: 450px;
+    overflow: hidden;
+    border: 2px solid var(--crayon-blue);
+    box-shadow: 0 15px 35px rgba(77, 163, 255, 0.2);
+}
+
+.welcome-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+}
+
+.welcome-photo:hover img {
+    transform: scale(1.05);
+}
+
 .welcome-message {
-    max-width: 900px;
-    margin: 0 auto 5rem;
-    padding: 4rem;
-    text-align: center;
+    margin: 0;
+    padding: 3rem;
+    text-align: left;
 }
 
 .kiddies-font {
@@ -714,6 +742,25 @@ h3.kiddies-font {
 
     .nav-links.active {
         right: 0;
+    }
+
+    .welcome-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .welcome-photo {
+        height: 400px;
+        order: -1;
+    }
+
+    .welcome-message {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .signature {
+        text-align: center;
     }
 
     .logo {
