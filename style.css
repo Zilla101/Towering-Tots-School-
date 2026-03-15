@@ -2,7 +2,7 @@
     --bg-color: #ffffff;
     --paper-texture: url("https://www.transparenttextures.com/patterns/natural-paper.png");
     --primary-font: 'Quicksand', sans-serif;
-    --accent-font: 'Outfit', sans-serif;
+    --accent-font: 'Poppins', sans-serif;
     
     /* Child-friendly harmonic palette */
     --crayon-red: #ff5e5e;
@@ -142,21 +142,7 @@ nav {
 .hero-subtitle {
     font-size: 1.5rem;
     color: var(--text-muted);
-    margin-bottom: 2rem;
-}
-
-.hero-image-container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto 3rem;
-    filter: drop-shadow(0 30px 50px rgba(0,0,0,0.1));
-    animation: float 8s ease-in-out infinite alternate;
-}
-
-.hero-main-img {
-    width: 100%;
-    height: auto;
-    border-radius: 40px;
+    margin-bottom: 3rem;
 }
 
 .cta-button {
@@ -182,14 +168,23 @@ nav {
     position: absolute;
     z-index: 1;
     pointer-events: none;
-    opacity: 0.6;
-    animation: float 6s ease-in-out infinite;
+    opacity: 0.3;
+    animation: float 8s ease-in-out infinite;
 }
 
-.doodle-1 { top: 15%; left: 10%; animation-delay: 0s; }
-.doodle-2 { bottom: 20%; right: 10%; animation-delay: 1s; }
-.doodle-3 { top: 20%; right: 15%; animation-delay: 2s; }
-.doodle-4 { bottom: 15%; left: 15%; animation-delay: 3s; }
+.doodle-1 { top: 10%; left: 5%; color: var(--crayon-red); }
+.doodle-2 { top: 40%; left: 2%; color: var(--crayon-blue); animation-delay: -2s; }
+.doodle-3 { top: 70%; left: 8%; color: var(--crayon-green); animation-delay: -4s; }
+.doodle-4 { top: 15%; right: 5%; color: var(--crayon-yellow); animation-delay: -1s; }
+.doodle-5 { top: 45%; right: 2%; color: var(--crayon-purple); animation-delay: -3s; }
+.doodle-6 { top: 75%; right: 8%; color: var(--crayon-red); animation-delay: -5s; }
+.doodle-7 { bottom: 10%; left: 20%; color: var(--crayon-blue); animation-delay: -1.5s; }
+.doodle-8 { bottom: 15%; right: 25%; color: var(--crayon-yellow); animation-delay: -3.5s; }
+.doodle-9 { top: 30%; left: 50%; transform: translateX(-50%); color: var(--crayon-green); opacity: 0.1; }
+
+.doodle svg {
+    filter: blur(0.5px);
+}
 
 @keyframes float {
     0%, 100% { transform: translateY(0) rotate(0deg); }

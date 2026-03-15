@@ -18,12 +18,13 @@ window.addEventListener("scroll", reveal);
 // Interactive Paper Mouse Effect
 document.addEventListener('mousemove', (e) => {
     const doodles = document.querySelectorAll('.doodle');
-    const x = e.clientX / window.innerWidth;
-    const y = e.clientY / window.innerHeight;
+    const x = (e.clientX / window.innerWidth) - 0.5;
+    const y = (e.clientY / window.innerHeight) - 0.5;
     
     doodles.forEach((doodle, index) => {
-        const factor = (index + 1) * 20;
-        doodle.style.transform = `translate(${x * factor}px, ${y * factor}px) rotate(${x * 5}deg)`;
+        const factor = (index + 1) * 15;
+        const rotate = x * 10;
+        doodle.style.transform = `translate(${x * factor}px, ${y * factor}px) rotate(${rotate}deg)`;
     });
 });
 
