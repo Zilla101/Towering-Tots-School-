@@ -196,12 +196,121 @@ nav {
     50% { transform: translateY(-10px); }
 }
 
-/* Glass Cards */
+/* Glass Cards & Grids */
 .section-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 5rem 10%;
+    align-items: start;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    color: var(--text-main);
+}
+
+.section-full {
+    padding: 8rem 10%;
+    background: rgba(255, 255, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    color: var(--crayon-blue);
+    text-align: center;
+}
+
+.story-grid {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.story-text h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--crayon-red);
+}
+
+.story-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+}
+
+.vision-mission {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.vision, .mission {
+    padding: 2rem;
+    background: var(--glass-bg);
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+}
+
+.vision h4, .mission h4 {
+    color: var(--crayon-green);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.kiddie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.kiddie-card {
+    background: var(--glass-bg);
+    padding: 2.5rem;
+    border-radius: 30px;
+    border: 1px solid var(--glass-border);
+    transition: transform 0.3s ease;
+}
+
+.kiddie-card:hover { transform: translateY(-10px); }
+
+.kiddie-card h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--crayon-purple);
+}
+
+.footer {
+    padding: 8rem 10% 4rem;
+    text-align: center;
+}
+
+.cta-box {
+    background: var(--crayon-yellow);
+    padding: 5rem 2rem;
+    border-radius: 50px;
+    color: var(--text-main);
+}
+
+.cta-box h2 { font-size: 3.5rem; margin-bottom: 1rem; }
+.cta-box p { font-size: 1.5rem; margin-bottom: 2.5rem; font-weight: 600; }
+
+.contact-strip {
+    margin-top: 4rem;
+    font-size: 1rem;
+    opacity: 0.7;
 }
 
 .card {
@@ -234,4 +343,16 @@ nav {
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .vision-mission, .kiddie-grid {
+        grid-template-columns: 1fr;
+    }
+    .story-grid {
+        flex-direction: column;
+    }
+    .section-title {
+        font-size: 2.5rem;
+    }
 }
