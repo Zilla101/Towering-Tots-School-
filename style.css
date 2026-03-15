@@ -82,22 +82,6 @@ nav {
     overflow: hidden; /* Contain background elements */
 }
 
-/* Crayon Line Border */
-.nav-crayon-line {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, 
-        var(--crayon-red) 0%, var(--crayon-red) 25%,
-        var(--crayon-blue) 25%, var(--crayon-blue) 50%,
-        var(--crayon-green) 50%, var(--crayon-green) 75%,
-        var(--crayon-yellow) 75%, var(--crayon-yellow) 100%
-    );
-    opacity: 0.6;
-}
-
 /* Navbar Background Art */
 .nav-bg {
     position: absolute;
@@ -108,7 +92,7 @@ nav {
     z-index: -1;
     pointer-events: none;
     opacity: 0.15;
-    display: none; /* Hidden on desktop by default */
+    display: none; /* Strictly hidden on desktop */
 }
 
 .nav-bg .nav-doodle {
