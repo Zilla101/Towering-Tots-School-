@@ -38,13 +38,13 @@ navItems.forEach(item => {
 
 // Interactive Paper Mouse Effect
 document.addEventListener('mousemove', (e) => {
-    const doodles = document.querySelectorAll('.doodle');
+    const doodles = document.querySelectorAll('.doodle, .menu-bg-doodle');
     const x = (e.clientX / window.innerWidth) - 0.5;
     const y = (e.clientY / window.innerHeight) - 0.5;
     
     doodles.forEach((doodle, index) => {
-        const factor = (index + 1) * 15;
-        const rotate = x * 10;
+        const factor = (index % 5 + 1) * 10;
+        const rotate = x * 15;
         doodle.style.transform = `translate(${x * factor}px, ${y * factor}px) rotate(${rotate}deg)`;
     });
 });
