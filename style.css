@@ -140,10 +140,7 @@ nav {
     font-weight: 700 !important;
 }
 
-@keyframes liquidGlow {
-    0%, 100% { box-shadow: 0 4px 15px rgba(77, 163, 255, 0.2); transform: scale(1); }
-    50% { box-shadow: 0 8px 25px rgba(77, 163, 255, 0.4); transform: scale(1.02); }
-}
+
 
 .portal-link:hover {
     background: var(--crayon-blue) !important;
@@ -247,15 +244,7 @@ nav {
     filter: blur(0.5px);
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(5deg); }
-}
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
 
 /* Liquid Glass & Visual Polish */
 .liquid-glass {
@@ -281,10 +270,7 @@ nav {
     pointer-events: none;
 }
 
-@keyframes liquidRotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+
 
 /* House Specific Liquid Variations */
 .liquid-yellow::after { background: radial-gradient(circle, rgba(255, 213, 0, 0.25) 0%, transparent 65%); }
@@ -299,11 +285,7 @@ nav {
     pointer-events: none;
 }
 
-@keyframes flowFloat {
-    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
-    33% { transform: translate(30px, -20px) rotate(10deg) scale(1.1); }
-    66% { transform: translate(-20px, 30px) rotate(-10deg) scale(0.9); }
-}
+
 
 .welcome-grid {
     display: grid;
