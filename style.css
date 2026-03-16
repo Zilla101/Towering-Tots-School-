@@ -594,21 +594,40 @@ h3.kiddies-font {
 .testimonial-text {
     font-family: 'Patrick Hand', cursive;
     font-size: 1.4rem;
-    line-height: 1.5;
+    line-height: 1.6;
     color: var(--text-main);
-    margin-bottom: 2rem;
+    margin: 2rem 0;
     position: relative;
+    z-index: 1;
+}
+
+.testimonial-text::before,
+.testimonial-text::after {
+    font-family: serif;
+    font-size: 6rem;
+    color: var(--crayon-blue);
+    opacity: 0.15;
+    position: absolute;
+    line-height: 1;
+    z-index: -1;
+    animation: quoteFloat 4s ease-in-out infinite alternate;
 }
 
 .testimonial-text::before {
     content: '“';
-    position: absolute;
-    top: -20px;
-    left: -10px;
-    font-size: 4rem;
-    color: var(--crayon-blue);
-    opacity: 0.2;
-    font-family: serif;
+    top: -40px;
+    left: -20px;
+}
+
+.testimonial-text::after {
+    content: '”';
+    bottom: -60px;
+    right: -10px;
+}
+
+@keyframes quoteFloat {
+    from { transform: translateY(0) rotate(-2deg); }
+    to { transform: translateY(-10px) rotate(2deg); }
 }
 
 .testimonial-author {
@@ -854,6 +873,15 @@ h3.kiddies-font {
     }
     .testimonial-text {
         font-size: 1.2rem;
+        margin: 1.5rem 0;
+    }
+    .testimonial-text::before {
+        font-size: 4rem;
+        top: -25px;
+    }
+    .testimonial-text::after {
+        font-size: 4rem;
+        bottom: -35px;
     }
 }
 
