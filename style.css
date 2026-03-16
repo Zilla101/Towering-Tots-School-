@@ -612,6 +612,7 @@ h3.kiddies-font {
     justify-content: space-between;
     min-height: 250px;
     transition: all 0.4s ease;
+    animation: liquidGlow 6s infinite ease-in-out alternate;
 }
 
 .testimonial-text {
@@ -866,6 +867,17 @@ h3.kiddies-font {
     }
     .hero-title {
         font-size: 2.8rem;
+    }
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .testimonial-card {
+        padding: 2rem;
+        min-height: auto;
+    }
+    .testimonial-text {
+        font-size: 1.2rem;
     }
 }
 
