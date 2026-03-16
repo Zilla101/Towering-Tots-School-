@@ -597,6 +597,69 @@ h3.kiddies-font {
     transition: transform 0.3s ease;
 }
 
+/* Testimonials */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    transition: all 0.4s ease;
+}
+
+.testimonial-text {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--text-main);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.testimonial-text::before {
+    content: '“';
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    font-size: 4rem;
+    color: var(--crayon-blue);
+    opacity: 0.2;
+    font-family: serif;
+}
+
+.testimonial-author {
+    margin-top: auto;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 1.5rem;
+}
+
+.testimonial-author strong {
+    display: block;
+    color: var(--crayon-blue);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.testimonial-author span {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(77, 163, 255, 0.15);
+}
+
 .kiddie-card:hover { 
     box-shadow: 0 20px 40px rgba(157, 141, 241, 0.2);
 }
