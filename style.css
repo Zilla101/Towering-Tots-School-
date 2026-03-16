@@ -31,6 +31,7 @@ html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -451,7 +452,6 @@ h3.kiddies-font {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding: 2rem 5% 5rem;
-    perspective: 1000px;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -486,7 +486,6 @@ h3.kiddies-font {
     border: 2px solid var(--crayon-blue);
     border-radius: 30px;
     box-shadow: 0 15px 35px rgba(77, 163, 255, 0.2);
-    animation: liquidGlow 6s infinite ease-in-out alternate; /* Applied globally to cards */
 }
 
 .team-img-wrapper {
@@ -534,13 +533,13 @@ h3.kiddies-font {
     text-shadow: 0 1px 5px rgba(0,0,0,0.8);
 }
 
-/* Liquid CTA Hover for Team Cards - Simplified */
+/* Management Team Hover - Matches Head of School static feel */
 .team-card:hover {
-    box-shadow: 0 30px 60px rgba(77, 163, 255, 0.3);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.05);
 }
 
 .team-card:hover .team-info {
-    background: linear-gradient(transparent, rgba(77, 163, 255, 0.8));
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
 }
 
 @media (max-width: 768px) {
