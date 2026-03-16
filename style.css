@@ -335,10 +335,6 @@ nav {
     transition: transform 0.5s ease;
 }
 
-.welcome-photo:hover img {
-    transform: scale(1.05);
-}
-
 .welcome-message {
     margin: 0;
     padding: 3rem;
@@ -490,6 +486,7 @@ h3.kiddies-font {
     border: 2px solid var(--crayon-blue);
     border-radius: 30px;
     box-shadow: 0 15px 35px rgba(77, 163, 255, 0.2);
+    animation: liquidGlow 6s infinite ease-in-out alternate; /* Applied globally to cards */
 }
 
 .team-img-wrapper {
@@ -537,21 +534,13 @@ h3.kiddies-font {
     text-shadow: 0 1px 5px rgba(0,0,0,0.8);
 }
 
-/* Liquid CTA Hover for Team Cards */
+/* Liquid CTA Hover for Team Cards - Simplified */
 .team-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-color: var(--crayon-blue);
     box-shadow: 0 30px 60px rgba(77, 163, 255, 0.3);
-    animation: liquidGlow 3s infinite;
-}
-
-.team-card:hover .team-img-wrapper img {
-    transform: scale(1.15);
 }
 
 .team-card:hover .team-info {
     background: linear-gradient(transparent, rgba(77, 163, 255, 0.8));
-    padding-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -609,7 +598,9 @@ h3.kiddies-font {
     transition: transform 0.3s ease;
 }
 
-.kiddie-card:hover { transform: translateY(-10px); }
+.kiddie-card:hover { 
+    box-shadow: 0 20px 40px rgba(157, 141, 241, 0.2);
+}
 
 .kiddie-card h4 {
     font-size: 1.8rem;
@@ -655,7 +646,7 @@ h3.kiddies-font {
 }
 
 .card:hover {
-    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 .card h3 {
