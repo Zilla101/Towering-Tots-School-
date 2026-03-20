@@ -82,13 +82,23 @@ nav {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--glass-border);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu-open nav {
+    top: 30px; /* Push nav down by 30px when menu is open */
+}
+
+.menu-open .hero, 
+.menu-open section {
+    transform: translateY(30px); /* Push content down by 30px */
 }
 
 .logo-img {
-    height: 56px; /* Increased by 40% (40px * 1.4) */
+    height: 68px; /* Increased by 20% from 56px */
     width: auto;
     object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
 .nav-links {
@@ -180,6 +190,14 @@ nav {
 
 .hero-title span {
     display: inline-block;
+    color: var(--crayon-blue);
+    animation: kiddieBounce 2s infinite ease-in-out;
+    transform-origin: bottom;
+}
+
+@keyframes kiddieBounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-20px) scale(1.05, 0.95); }
 }
 
 .hero-subtitle {
@@ -238,7 +256,10 @@ nav {
 .doodle-6 { top: 78%; right: 12%; color: var(--crayon-red); animation-delay: -5s; transform: rotate(-20deg); }
 .doodle-7 { bottom: 8%; left: 15%; color: var(--crayon-blue); animation-delay: -1.5s; }
 .doodle-8 { bottom: 12%; right: 20%; color: var(--crayon-yellow); animation-delay: -3.5s; transform: rotate(10deg); }
-.doodle-9 { top: 25%; left: 55%; transform: translateX(-50%); color: var(--crayon-purple); opacity: 0.05; }
+.doodle-9 { top: 55%; left: 45%; color: var(--crayon-red); opacity: 0.15; transform: rotate(-15deg); }
+.doodle-10 { top: 25%; right: 45%; color: var(--crayon-green); opacity: 0.15; transform: rotate(20deg); }
+.doodle-11 { bottom: 35%; left: 5%; color: var(--crayon-purple); opacity: 0.15; transform: rotate(50deg); }
+.doodle-12 { bottom: 55%; right: 10%; color: var(--crayon-blue); opacity: 0.15; transform: rotate(-10deg); }
 
 .doodle svg {
     filter: blur(0.5px);
@@ -348,24 +369,36 @@ h3.kiddies-font {
 }
 
 .hamburger span {
-    width: 30px;
-    height: 3px;
-    background: var(--text-main);
-    border-radius: 10px;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 35px;
+    height: 6px;
+    background: var(--crayon-blue);
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.hamburger span:nth-child(2) {
+    background: var(--crayon-yellow);
+    width: 28px;
+    margin-left: auto;
+}
+
+.hamburger span:nth-child(3) {
+    background: var(--crayon-green);
+    width: 32px;
 }
 
 .hamburger.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
+    transform: translateY(11px) rotate(135deg);
     background: var(--crayon-red);
 }
 
 .hamburger.active span:nth-child(2) {
     opacity: 0;
+    transform: translateX(-20px);
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-11px) rotate(-135deg);
     background: var(--crayon-red);
 }
 
@@ -738,22 +771,29 @@ h3.kiddies-font {
 
     .nav-links {
         position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
-        background: rgba(255, 255, 255, 0.98); 
-        backdrop-filter: blur(25px);
-        -webkit-backdrop-filter: blur(25px);
+        top: 2rem;
+        right: -110%;
+        width: 90%;
+        max-width: 450px;
+        height: auto;
+        max-height: 90vh;
+        margin: 0 5%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        z-index: 9999; 
-        gap: 2.5rem;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 9999;
+        gap: 1.2rem;
         opacity: 0;
         visibility: hidden;
-        overflow: hidden; 
+        border-radius: 40px;
+        border: 3px solid var(--crayon-blue);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        padding: 5rem 2rem 3rem;
+        overflow-y: auto;
     }
 
     .nav-links.active {
@@ -783,10 +823,12 @@ h3.kiddies-font {
     .nav-links.active li:nth-child(6) { transition-delay: 0.35s; }
 
     .nav-links a {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         color: var(--text-main) !important;
         display: block;
-        padding: 1rem;
+        padding: 0.8rem 1.5rem;
+        width: 100%;
+        text-align: center;
     }
 
     .nav-links.active {
@@ -823,11 +865,19 @@ h3.kiddies-font {
 
     .portal-link {
         font-size: 1.1rem !important;
-        padding: 0.4rem 0.8rem !important; /* Reduced horizontal padding for slimness */
-        margin-top: 1rem;
-        background: rgba(77, 163, 255, 0.1) !important;
-        width: auto !important; /* Ensure it doesn't stretch */
-        min-width: 100px;
+        padding: 0.4rem 1.2rem !important; /* Slightly more padding for better look */
+        margin-top: 1.5rem;
+        background: var(--crayon-blue) !important; /* More prominent background */
+        color: white !important;
+        width: auto !important;
+        min-width: 140px;
+        box-shadow: 0 0 20px rgba(77, 163, 255, 0.6), 0 0 40px rgba(77, 163, 255, 0.3) !important; /* Highly visible glow */
+        animation: portalGlow 2s infinite alternate ease-in-out;
+    }
+
+    @keyframes portalGlow {
+        from { box-shadow: 0 0 15px rgba(77, 163, 255, 0.5); }
+        to { box-shadow: 0 0 30px rgba(77, 163, 255, 0.8), 0 0 50px rgba(77, 163, 255, 0.4); }
     }
 }
 
