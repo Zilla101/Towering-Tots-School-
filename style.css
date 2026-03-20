@@ -771,7 +771,7 @@ h3.kiddies-font {
 
     .nav-links {
         position: fixed;
-        top: 2rem;
+        top: calc(2rem + 25px); /* Pushed down by an additional 25px */
         right: -110%;
         width: 90%;
         max-width: 450px;
