@@ -13,5 +13,8 @@
   "type": "commonjs",
   "devDependencies": {
     "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "sharp": "^0.35.4"
   }
 }

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdVora Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Mobile Backdrop -->
+        <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar expanded" id="sidebar">
+            <div class="sidebar-header">
+                <div class="brand">
+                    <div class="brand-icon"><i class="ph-fill ph-graduation-cap"></i></div>
+                    <div class="brand-text">
+                        <span class="brand-name">EdVora</span>
+                        <span class="brand-slogan">Where Schools Run Smarter</span>
+                    </div>
+                </div>
+                <button class="sidebar-toggle" id="desktopToggle" aria-label="Toggle Sidebar">
+                    <i class="ph ph-caret-left toggle-icon"></i>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <!-- OVERVIEW -->
+                <div class="nav-section">
+                    <h5 class="section-label">Overview</h5>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#" class="nav-item active" title="Dashboard">
+                                <i class="ph ph-squares-four nav-icon"></i>
+                                <span class="nav-label">Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ACADEMICS -->
+                <div class="nav-section">
+                    <h5 class="section-label">Academics</h5>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#" class="nav-item" title="Classes">
+                                <i class="ph ph-chalkboard-teacher nav-icon"></i>
+                                <span class="nav-label">Classes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-item" title="Subjects">
+                                <i class="ph ph-books nav-icon"></i>
+                                <span class="nav-label">Subjects</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-item has-submenu" title="Assessments">
+                                <i class="ph ph-exam nav-icon"></i>
+                                <span class="nav-label">Assessments</span>
+                                <i class="ph ph-caret-down submenu-caret"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-item" title="Attendance">
+                                <i class="ph ph-calendar-check nav-icon"></i>
+                                <span class="nav-label">Attendance</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- PEOPLE -->
+                <div class="nav-section">
+                    <h5 class="section-label">People</h5>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#" class="nav-item" title="Students">
+                                <i class="ph ph-student nav-icon"></i>
+                                <span class="nav-label">Students</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-item" title="Teachers">
+                                <i class="ph ph-users-three nav-icon"></i>
+                                <span class="nav-label">Teachers</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- FINANCE -->
+                <div class="nav-section">
+                    <h5 class="section-label">Finance</h5>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#" class="nav-item" title="Fees">
+                                <i class="ph ph-money nav-icon"></i>
+                                <span class="nav-label">Fees</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-item" title="Invoices">
+                                <i class="ph ph-receipt nav-icon"></i>
+                                <span class="nav-label">Invoices</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">JD</div>
+                    <div class="user-info">
+                        <span class="user-name">John Doe</span>
+                        <span class="user-role">School Administrator</span>
+                    </div>
+                    <button class="user-menu-btn" aria-label="User Menu">
+                        <i class="ph ph-dots-three-vertical"></i>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu">
+                    <i class="ph ph-list"></i>
+                </button>
+                <h2>Dashboard Overview</h2>
+            </header>
+            <div class="content-area">
+                <div class="placeholder-card">
+                    <h3>Welcome back, John!</h3>
+                    <p>This is your school management dashboard area. The navigation sidebar to the left is fully responsive, accessible, and designed for SaaS platforms.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
